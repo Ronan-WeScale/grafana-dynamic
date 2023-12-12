@@ -1,5 +1,5 @@
 app:
-  name: ""
+  name: "appname"
 instance:
   enabled: false
   name: ""
@@ -9,6 +9,3 @@ datasource:
   name: ""
   url: ""
   namespaces: []
-dashboards:
-  - name: ""
-    content: ""

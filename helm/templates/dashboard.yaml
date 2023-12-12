@@ -1,14 +1,14 @@
 ---
-{{- range .Values.dashboards }}
+{{- range $path, $_ :=  .Files.Glob  "dashboards/**.json" }}
 apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDashboard
 metadata:
-  name: {{ .name }}
+  name: {{ $.Values.app.name }}-{{ $path | base | replace ".json"  "" }}
 spec:
   resyncPeriod: 30s
   instanceSelector:
     matchLabels:
       app: {{ $.Values.app.name }}
   json: >
-  {{ .content | indent 2 }}
+{{ $.Files.Get $path | indent 4 }}
 {{- end }}
