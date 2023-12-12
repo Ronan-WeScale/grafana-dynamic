@@ -1,3 +1,4 @@
+{{ if .Values.instance.enabled }}
 apiVersion: grafana.integreatly.org/v1beta1
 kind: Grafana
 metadata:
@@ -18,14 +19,14 @@ spec:
     auth:
       oauth_allow_insecure_email_lookup: "true"
     server:
-      root_url: 'https://{{ .Values.instanc.url }}/{{ .Values.instance.name }}/'
+      root_url: 'https://{{ .Values.instance.url }}/{{ .Values.instance.name }}/'
       serve_from_sub_path: "true"
 
   route:
     metadata:
       name: grafana-infra
     spec:
-      host: {{ .Values.instanc.url }}
+      host: {{ .Values.instance.url }}
       path: "/{{ .Values.instance.name }}"
       port:
         targetPort: 3000
@@ -36,3 +37,4 @@ spec:
         name: {{ .Values.instance.name }}-service
         weight: 100
       wildcardPolicy: None
+{{ end }}

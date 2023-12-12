@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: guestbook
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+    - git:
+        repoURL: client_project_url
+        revision: HEAD
+        files:
+        - path: "dashboards/*.json"
+  template:
+    metadata:
+      name: $name
+    spec:
+      project: $project
+      source:
+        repoURL: helm_url
+        targetRevision: HEAD
+        path: "helm/"
+        helm:
+          values: |
+            dashboards: 
+            {{- range .path }}
+            - name: {{ .path.filename }}
+              content: {{ .dashboard }}
+            {{ end }}
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: $namespace

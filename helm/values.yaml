@@ -1,9 +1,11 @@
 app:
   name: ""
 instance:
+  enabled: false
   name: ""
   url: ""
 datasource:
+  enabled: false
   name: ""
   url: ""
   namespaces: []

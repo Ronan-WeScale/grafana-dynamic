@@ -1,3 +1,4 @@
+{{ if .Values.datasource.enabled }}
 apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDatasource
 metadata:
@@ -33,3 +34,4 @@ spec:
   instanceSelector:
     matchLabels:
       app: {{ .Values.app.name }}
+{{ end }}
