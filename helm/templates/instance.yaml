@@ -1,0 +1,38 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: Grafana
+metadata:
+  name: {{ .Values.instance.name }}
+  labels:
+    app: {{ .Values.app.name }}
+    dashboards: default
+spec:
+  baseImage: grafana/grafana:9.5.5
+  deployment:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: grafana
+              image: grafana/grafana:9.5.5
+  config:
+    auth:
+      oauth_allow_insecure_email_lookup: "true"
+    server:
+      root_url: 'https://{{ .Values.instanc.url }}/{{ .Values.instance.name }}/'
+      serve_from_sub_path: "true"
+
+  route:
+    metadata:
+      name: grafana-infra
+    spec:
+      host: {{ .Values.instanc.url }}
+      path: "/{{ .Values.instance.name }}"
+      port:
+        targetPort: 3000
+      tls:
+        termination: edge
+      to:
+        kind: Service
+        name: {{ .Values.instance.name }}-service
+        weight: 100
+      wildcardPolicy: None

@@ -1,0 +1,35 @@
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDatasource
+metadata:
+  name: {{ .Values.datasource.name }}
+spec:
+  valuesFrom:
+    - targetPath: "basicAuthUser"
+      valueFrom:
+        secretKeyRef:
+          name: "credentials"
+          key: "PROMETHEUS_USERNAME"
+    - targetPath: "secureJsonData.basicAuthPassword"
+      valueFrom:
+        secretKeyRef:
+          name: "credentials"
+          key: "PROMETHEUS_PASSWORD"
+  datasource:
+    access: proxy
+    valuesFrom:
+    jsonData:
+      httpHeaderName1: X-Scope-OrgID
+    name: Prometheus
+    secureJsonData:
+      httpHeaderValue1: {{ join "|" .Values.datasource.namespaces }}
+      basicAuthPassword: ${PROMETHEUS_PASSWORD}
+    type: prometheus
+    basicAuth: true
+    basicAuthUser: ${PROMETHEUS_USERNAME}
+    uid: prometheus
+    url: {{ .Values.datasource.url }}
+    isDefault: true
+  name: default
+  instanceSelector:
+    matchLabels:
+      app: {{ .Values.app.name }}

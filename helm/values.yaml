@@ -1,0 +1,12 @@
+app:
+  name: ""
+instance:
+  name: ""
+  url: ""
+datasource:
+  name: ""
+  url: ""
+  namespaces: []
+dashboards:
+  - name: ""
+    content: ""
