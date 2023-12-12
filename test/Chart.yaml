@@ -6,4 +6,5 @@ version: 0.1.1
 appVersion: "0.0.1"
 dependencies:
   - name: grafana-dynamic
-    repository: https://ronan-wescale.github.io/grafana_dynamic
+    version: 0.1.0
+    repository: https://ronan-wescale.github.io/grafana-dynamic
