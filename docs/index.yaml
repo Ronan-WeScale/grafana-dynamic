@@ -1,3 +1,14 @@
 apiVersion: v1
-entries: {}
-generated: "2023-12-12T17:19:44.506341+01:00"
+entries:
+  grafana-dashboards:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-12-12T17:25:26.645447+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 793bc7c2d3cba17106577366f9629fac5446a5eab476ed863c1b7216eba1b8a0
+    name: grafana-dashboards
+    type: application
+    urls:
+    - grafana-dashboards-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-12-12T17:25:26.644693+01:00"
