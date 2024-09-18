@@ -1,5 +1,6 @@
 { 
-    "dashboard": {
+    "dashboard": [
+        {
         "id": null,
         "title": "Simple Dashboard from ConfigMap",
         "tags": [],
@@ -27,5 +28,6 @@
         "schemaVersion": 17,
         "version": 0,
         "links": []
-      } 
+      }
+    ]
 }
