@@ -1,5 +1,5 @@
 { 
-    "dashboard": [
+    "dashboards": [
         {
         "id": null,
         "title": "Simple Dashboard from ConfigMap",
