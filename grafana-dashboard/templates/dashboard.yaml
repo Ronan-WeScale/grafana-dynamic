@@ -10,5 +10,5 @@ spec:
     matchLabels:
       app: {{ $.Values.app.name }}
   json: >
-{{ $value | indent 4 }}
+{{ $value | toPrettyJson | indent 4 }}
 {{- end }}
