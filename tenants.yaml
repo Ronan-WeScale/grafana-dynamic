@@ -1,3 +1,0 @@
-tenants:
-  - name: test
-    repoUrl: https://github.com/Ronan-WeScale/grafana-dynamic.git
