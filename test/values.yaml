@@ -1,0 +1,4 @@
+app:
+  name: "test"
+dashboards:
+  test-dashboard.json: {{ .Files.Get "dashboards/test-dashboard.json" | toPrettyJson }}
