@@ -1,1 +1,5 @@
 ---
+global:
+  tenantId: tenant-1
+app:
+  name: "mon-app"

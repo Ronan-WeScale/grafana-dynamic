@@ -1,24 +1,14 @@
 apiVersion: v1
 entries:
-  grafana-dashboards:
+  obs:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2024-09-10T17:26:06.683634+02:00"
-    description: A Helm chart for Kubernetes
-    digest: f7645a3918643d831d2165f101936075afb89fde259f585e90f409e1cf97d091
-    name: grafana-dashboards
+    appVersion: 0.0.1
+    created: "2024-09-20T09:48:54.290816+02:00"
+    description: A Helm chart for Kubernetes to deploy GrafanaDashboard and PrometheusRule
+    digest: 1f4f55fb8d799ec48bfb94fd550ae40d8364c889b10077b97536820feb949838
+    name: obs
     type: application
     urls:
-    - grafana-dashboards-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2024-09-10T17:26:06.683442+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 793bc7c2d3cba17106577366f9629fac5446a5eab476ed863c1b7216eba1b8a0
-    name: grafana-dashboards
-    type: application
-    urls:
-    - grafana-dashboards-0.1.0.tgz
-    version: 0.1.0
-generated: "2024-09-10T17:26:06.683005+02:00"
+    - obs-0.1.2.tgz
+    version: 0.1.2
+generated: "2024-09-20T09:48:54.290191+02:00"

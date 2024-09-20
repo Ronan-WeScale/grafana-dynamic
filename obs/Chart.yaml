@@ -1,0 +1,6 @@
+apiVersion: v2
+name: obs
+description: A Helm chart for Kubernetes to deploy GrafanaDashboard and PrometheusRule
+type: application
+version: 0.1.2
+appVersion: "0.0.1"
