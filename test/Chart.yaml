@@ -6,6 +6,6 @@ version: 0.1.0
 appVersion: "0.0.1"
 dependencies:
   - name: obs
-    version: 0.1.2
+    version: 0.1.3
     #repository: https://ronan-wescale.github.io/grafana-dynamic/
     repository: "file://../obs"
