@@ -7,7 +7,11 @@ metadata:
   name: {{ $.Values.global.tenantId }}-{{ $path | base | replace ".yaml.tpl"  "" }}
   labels:
     tenant_id: {{ $.Values.global.tenantId }}
-    type: 
+    {{- if regexMatch "/logs/" $path}}
+    type: logs
+    {{- else if regexMatch "/metrics/" $path }}
+    type: metrics
+    {{- end }}
 spec:
   {{ tpl ($.Files.Get $path) $ }}
 {{- end }}
