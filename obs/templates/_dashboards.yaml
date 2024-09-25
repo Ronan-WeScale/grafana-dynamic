@@ -8,6 +8,7 @@ metadata:
   labels:
     tenant_id: {{ $.Values.global.tenantId }}
 spec:
+  allowCrossNamespaceImport: true
   resyncPeriod: 30s
   instanceSelector:
     matchLabels:
