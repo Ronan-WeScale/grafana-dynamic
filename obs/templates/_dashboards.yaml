@@ -1,5 +1,5 @@
 {{- define "grafana-dashboards.dashboards" -}}
-{{- range $path, $_ := $.Files.Glob "observability/dashboards/*.json" }}
+{{- range $path, $_ := $.Files.Glob "files/dashboards/*.json" }}
 ---
 apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDashboard

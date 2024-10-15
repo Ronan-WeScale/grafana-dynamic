@@ -3,7 +3,17 @@ entries:
   obs:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-09-25T16:26:42.75584+02:00"
+    created: "2024-10-15T15:27:00.168931+02:00"
+    description: A Helm chart for Kubernetes to deploy GrafanaDashboard and PrometheusRule
+    digest: dba7d4f1db1dbae06859fac9f3db1d423d1b69ed59c4ff7870c4fd0b70799336
+    name: obs
+    type: application
+    urls:
+    - obs-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-10-15T15:27:00.168672+02:00"
     description: A Helm chart for Kubernetes to deploy GrafanaDashboard and PrometheusRule
     digest: 343a0480a44d5add5468635b20d28df02054893b6d2ed239caa03ed51e44a1d6
     name: obs
@@ -13,7 +23,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-09-25T16:26:42.755655+02:00"
+    created: "2024-10-15T15:27:00.168274+02:00"
     description: A Helm chart for Kubernetes to deploy GrafanaDashboard and PrometheusRule
     digest: b51e3f6be82be58b6c02e9a11e48b18c8dcb859191abbb194f0b75cbc272bd95
     name: obs
@@ -23,7 +33,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-09-25T16:26:42.755434+02:00"
+    created: "2024-10-15T15:27:00.167897+02:00"
     description: A Helm chart for Kubernetes to deploy GrafanaDashboard and PrometheusRule
     digest: 308313b071f4d2ac6a25b1f644b07fb1edc8428d6c906cf4661855b178dc934d
     name: obs
@@ -33,7 +43,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-09-25T16:26:42.755196+02:00"
+    created: "2024-10-15T15:27:00.167277+02:00"
     description: A Helm chart for Kubernetes to deploy GrafanaDashboard and PrometheusRule
     digest: 1f4f55fb8d799ec48bfb94fd550ae40d8364c889b10077b97536820feb949838
     name: obs
@@ -41,4 +51,4 @@ entries:
     urls:
     - obs-0.1.2.tgz
     version: 0.1.2
-generated: "2024-09-25T16:26:42.754211+02:00"
+generated: "2024-10-15T15:27:00.16614+02:00"
